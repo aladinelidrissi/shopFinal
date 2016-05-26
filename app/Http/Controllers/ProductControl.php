@@ -27,6 +27,9 @@ class ProductControl extends Controller
     public function newProduct(){
         return view('admin.new');
     }
+    public function newUser(){
+        return view('admin.createuser');
+    }
 
     public function add() {
 

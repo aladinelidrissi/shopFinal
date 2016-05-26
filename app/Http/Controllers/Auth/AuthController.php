@@ -7,6 +7,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Support\Facades\Input;
 
 class AuthController extends Controller
 {
@@ -30,6 +31,8 @@ class AuthController extends Controller
      */
     protected $redirectTo = '/';
 
+    protected $loginPath = '/auth/login';
+
     /**
      * Create a new authentication controller instance.
      *
@@ -52,14 +55,16 @@ class AuthController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
+            'role' => 'required',
+
         ]);
     }
 
+
+    
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
-     * @return User
      */
     protected function create(array $data)
     {
@@ -67,6 +72,19 @@ class AuthController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'role' => $data['role'],
         ]);
     }
+    protected function createUser()
+    {
+        $data = Input::all();
+        User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password']),
+            'role' => $data['role'],
+        ]);
+    }
+    
+    
 }

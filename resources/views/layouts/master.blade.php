@@ -3,7 +3,7 @@
     <title>E-Shop</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
 
 
@@ -27,9 +27,13 @@
                     @if(!Auth::user())
                         <li><a href="/auth/login">Iniciar Sessió</a></li>
                         <li><a href="/auth/register">Registrar-se</a></li>
-                    @else
-                        <li><a href="/order">My Order <span class="fa fa-briefcase"></span></a></li>
-                        <li><a href="/cart">Carret <span class="fa fa-shopping-cart"></span></a></li>
+                    @elseif(Auth::user()->isBuyer())
+                        <li><a href="/order">Les meves comandes<span class="fa truck"></span></a></li>
+                        <li><a href="/cart">Carret <span class="fa fa-shopping-basket"></span></a></li>
+                        <li><a href="/auth/logout">Sortir {{ Auth::user()->name}}</a></li>
+                    @elseif(Auth::user()->isAdmin())
+                        <li><a href="/admin/products">Llista de productes<span class="fa truck"></span></a></li>
+                        <li><a href="{{route('usersList')}}">Llista d'usuaris <span class="fa fa-shopping-basket"></span></a></li>
                         <li><a href="/auth/logout">Sortir {{ Auth::user()->name}}</a></li>
                     @endif
                 </ul>
@@ -44,5 +48,6 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/9131e865b7.js"></script>
 </body>
 </html>
