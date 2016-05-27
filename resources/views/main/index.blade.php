@@ -14,13 +14,7 @@
 
                     <div class="col-sm-6 col-md-4">
                         <div class="thumbnail" >
-                            <?php
-                                $storage ="img/ds3.jpg";
-
-                                $route = $storage.$product->file->filename;
-                            ?>
-
-                            <img src="{{$storage}}" class="img-responsive">
+                            <img src="{{$product->file_url}}" >
                             <div class="caption">
                                 <div class="row">
                                     <div class="col-md-6 col-xs-6">

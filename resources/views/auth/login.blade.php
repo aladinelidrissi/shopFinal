@@ -5,7 +5,7 @@
 @section('sidebar')
     @parent
 @endsection
-<br><br><br><br>
+@section('content')
 <div class="container">
     <form class="form-horizontal" method="POST" action="">
         {!! csrf_field() !!}
@@ -47,3 +47,4 @@
         </fieldset>
     </form>
 </div>
+@endsection

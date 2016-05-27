@@ -60,12 +60,12 @@
                                                         <div class="col-sm-11">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" ng-model="user.role" name="role" id="optionsRadios1" value="admin" checked="" class="form-control input-sm"> Usuari administrador
+                                                                    <input type="radio"name="role" id="optionsRadios1" value="admin" checked="" class="form-control input-sm"> Usuari administrador
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" ng-model="user.role" name="role" id="optionsRadios2" value="buyer" class="form-control input-sm"> Usuari normal
+                                                                    <input type="radio" name="role" id="optionsRadios2" value="buyer" class="form-control input-sm"> Usuari normal
                                                                 </label>
                                                             </div>
                                                         </div>

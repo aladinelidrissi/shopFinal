@@ -6,8 +6,7 @@ use App\Http\Requests;
 use App\User;
 
 use App\Http\Controllers\Controller;
-use Request;
-
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
@@ -34,14 +33,34 @@ class UserControl extends Controller
     }
     protected function editUser($id)
     {
-        
-        $user  = User::find($id);
-        $user->name =Request::input('name');
-        $user->email =Request::input('email');
-        $user->role =Request::input('role');
+        $user = User::find($id);
+        $user->name = Input::get('name');
+        $user->email = Input::get('email');
+
+        if (Input::has('role')) {
+            $user->role = Input::get('role');
+        }else{
+            $user->role = Input::get('role','buyer');
+        }
 
         $user->save();
 
         return redirect('/admin/users');
+    }
+    public function goEdit(){
+        return view('auth.edit');
+    }
+    protected function selfEdit($id)
+    {
+        $user = User::find($id);
+        $user->name = Input::get('name');
+        $user->email = Input::get('email');
+        if (Input::has('password')){
+            $user->password = bcrypt(Input::get('password'));
+        }
+
+        $user->save();
+
+        return redirect()->back();
     }
 }

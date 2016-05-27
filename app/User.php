@@ -38,8 +38,5 @@ class User extends Authenticatable
         }
         return false;
     }
-    public function deleteUser(){
-        $this->delete();
-    }
 
 }
