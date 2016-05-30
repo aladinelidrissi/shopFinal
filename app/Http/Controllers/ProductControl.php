@@ -33,11 +33,19 @@ class ProductControl extends Controller
 
 
     public function index(){
-    $products = Product::all();
-    return view('admin.products',['products' => $products]);
-    }
 
+        $products = Product::all();
+
+        return view('admin.products',['products' => $products]);
+    }
+    public function showDescription($productId){
+
+        $entry = Product::find($productId);
+
+        return view('main.description',['entry' => $entry]);
+    }
     public function destroy($id){
+
         Product::destroy($id);
 
         return redirect('/admin/products')->with('message', 'Message sent!');

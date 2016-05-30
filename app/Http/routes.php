@@ -1,6 +1,7 @@
 <?php
 // Main route...
 Route::get('/', 'MainControl@index');
+Route::get('/description/{productId}', 'ProductControl@showDescription');
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
@@ -33,8 +34,8 @@ Route::get('/addProduct/{productId}', 'TrolleyControl@addItem');
 Route::get('/removeItem/{productId}', 'TrolleyControl@removeItem');
 Route::get('/trolley', 'TrolleyControl@showTrolley');
 
+//Charge routes...
 Route::post('/checkout', 'ChargeControl@checkout');
-
 Route::get('charge/{chargeId}', 'ChargeControl@showCharge');
 Route::get('charge', 'ChargeControl@index');
 Route::get('download/{chargeId}/{filename}', 'ChargeControl@download');
