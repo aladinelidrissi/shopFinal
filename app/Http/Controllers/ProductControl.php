@@ -79,4 +79,26 @@ class ProductControl extends Controller
                 return redirect('/admin/products')->with('message', 'Message sent!');
 
     }
+    protected function editProduct($id)
+    {
+        $product = Product::find($id);
+        $file = Request::file('file');
+
+        if(Input::has('file')){
+            $destinationPath = 'img/'; // upload path
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $fileName = rand(11111, 99999) . '.' . $extension; // renameing image
+            $file->move($destinationPath, $fileName); // uploading file to given path
+            $product->file_url = 'img/'.$fileName;
+        }
+
+        $product->name = Input::get('name');
+        $product->description = Input::get('description');
+        $product->price = Input::get('price');
+
+
+        $product->save();
+
+        return redirect('/admin/products');
+    }
 }
