@@ -6,8 +6,11 @@
     @parent
 @endsection
 
+@section('messages')
+    @parent
+@endsection
+
 @section('content')
-    <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <a href="/admin/user/new"><button class="btn btn-success">Crear Usuari</button></a>
@@ -88,6 +91,5 @@
                 </table>
             </div>
         </div>
-    </div>
 
 @endsection

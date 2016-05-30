@@ -26,7 +26,7 @@ class ChargeControl extends Controller
     {
         $token = $request->input('stripeToken');
 
-        //Retriieve trolley information
+        //Retrieve trolley information
         $trolley = Trolley::where('user_id',Auth::user()->id)->first();
         $items = $trolley->trolleyItems;
         $total=0;

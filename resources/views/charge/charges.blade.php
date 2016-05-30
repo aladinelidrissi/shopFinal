@@ -1,10 +1,12 @@
-
-
 @extends('layouts.master')
 
 @section('Digital shop', 'Page Title')
 
 @section('sidebar')
+    @parent
+@endsection
+
+@section('messages')
     @parent
 @endsection
 

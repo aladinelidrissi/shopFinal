@@ -29,6 +29,10 @@ class UserControl extends Controller
     protected function deleteUser($id)
     {
         User::destroy($id);
+
+        Session::flash('message', 'Usuari eliminat!');
+        Session::flash('alert-class', 'alert-danger');
+
         return redirect('/admin/users');
     }
     protected function editUser($id)
@@ -44,6 +48,9 @@ class UserControl extends Controller
         }
 
         $user->save();
+
+        Session::flash('message', 'Usuari editat.');
+        Session::flash('alert-class', 'alert-info');
 
         return redirect('/admin/users');
     }
@@ -61,6 +68,9 @@ class UserControl extends Controller
 
         $user->save();
 
+        Session::flash('message', 'Canvis realitzats correctament.');
+        Session::flash('alert-class', 'alert-info');
+        
         return redirect()->back();
     }
 }

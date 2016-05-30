@@ -5,8 +5,12 @@
 @section('sidebar')
     @parent
 @endsection
+
+@section('messages')
+    @parent
+@endsection
+
 @section('content')
-    <div class="container">
         <form class="form-horizontal" method="POST" action="">
             {!! csrf_field() !!}
                 <h2 class="section-heading" style="font-weight: bold" >Registrar-se</h2><br><br>
@@ -42,8 +46,6 @@
                 </div>
 
         </form>
-    </div>
 @endsection
 
 
-<script src="/js/psw_validate.js"></script>

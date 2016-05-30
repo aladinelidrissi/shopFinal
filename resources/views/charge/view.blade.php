@@ -6,6 +6,10 @@
     @parent
 @endsection
 
+@section('messages')
+    @parent
+@endsection
+
 @section('content')
     <div class="row">
         <div class="col-md-8">

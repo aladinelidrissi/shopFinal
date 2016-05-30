@@ -5,8 +5,12 @@
 @section('sidebar')
     @parent
 @endsection
-<br><br><br><br>
-<div class="container">
+
+@section('messages')
+    @parent
+@endsection
+
+@section('content')
     <form class="form-horizontal" method="POST" action="{{route('registerPost')}}">
         {!! csrf_field() !!}
         <h2 class="section-heading" style="font-weight: bold">Registrar-se</h2><br><br>
@@ -56,6 +60,5 @@
             </div>
         </div>
     </form>
-</div>
+@endsection
 
-<script src="/js/psw_validate.js"></script>

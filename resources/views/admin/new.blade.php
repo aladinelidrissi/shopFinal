@@ -6,6 +6,10 @@
     @parent
 @endsection
 
+@section('messages')
+    @parent
+@endsection
+
 @section('content')
     <div class="panel panel-info">
         <div class="panel-heading">

@@ -6,8 +6,11 @@
     @parent
 @endsection
 
+@section('messages')
+    @parent
+@endsection
+
 @section('content')
-    <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <a href="/admin/product/new"><button class="btn btn-success">New Product</button></a>
@@ -45,6 +48,7 @@
                                             </div>
                                             <div class="modal-body">
                                                 <form method="POST" action="/admin/product/edit/{{$product->id}}" enctype="multipart/form-data" role="form" class="form-horizontal">
+                                                    {!! csrf_field() !!}
                                                     <div class="form-group">
                                                         <label class="col-md-3 control-label" for="name">Name</label>
                                                         <div class="col-md-9">
@@ -73,9 +77,6 @@
                                                     <button type="submit" class="btn btn-sm btn-success" >Guardar</button>
                                                 </form>
                                             </div>
-                                            <div class="modal-footer">
-
-                                            </div>
                                         </div>
 
                                     </div>
@@ -88,6 +89,5 @@
                 </table>
             </div>
         </div>
-    </div>
 
 @endsection

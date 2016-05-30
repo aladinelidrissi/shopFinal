@@ -6,8 +6,11 @@
     @parent
 @endsection
 
+@section('messages')
+    @parent
+@endsection
+
 @section('content')
-    <div class="container">
         <form class="form-horizontal" method="POST" action="/user/edit/save/{{Auth::user()->id}}">
             {!! csrf_field() !!}
             <h2 class="section-heading" style="font-weight: bold" >Editar Perfil</h2><br><br>
@@ -43,6 +46,5 @@
             </div>
 
         </form>
-    </div>
 @endsection
 

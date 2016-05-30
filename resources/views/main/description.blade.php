@@ -6,9 +6,12 @@
     @parent
 @endsection
 
+@section('messages')
+    @parent
+@endsection
+
 @section('content')
-    <div class="container">
-        <div class="row">
+    <div class="row">
             <div class="col-md-12">
                     <div class="col-sm-6 col-md-4">
                         <div class="thumbnail" >
@@ -29,6 +32,4 @@
                     </div>
             </div>
         </div>
-    </div>
-
 @endsection

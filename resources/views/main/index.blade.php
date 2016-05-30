@@ -6,38 +6,25 @@
     @parent
 @endsection
 
+@section('messages')
+    @parent
+@endsection
+
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
+    <div class="row">
+            <div class="col-md-4">
                 @foreach ($products as $product)
-
-                    <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail" >
-                            <img src="{{$product->file_url}}" >
-                            <div class="caption">
-                                <div class="row">
-                                    <div class="col-md-6 col-xs-6">
-                                        <a href="/description/{{$product->id}}"><h3>{{$product->name}}</h3></a>
-                                    </div>
-                                    <div class="col-md-6 col-xs-6 price">
-                                        <h3>
-                                            <label>${{$product->price}}</label>
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <a href="/addProduct/{{$product->id}}" class="btn btn-success btn-product"><span class="fa fa-shopping-cart"></span> Buy</a>
-                                    </div>
-                                </div>
-
+                        <div class="viatge panel panel-default hover">
+                            <div class="panel-heading"><a href="/description/{{$product->id}}"><strong>{{$product->name}}</strong></a></div>
+                            <div class="panel-body">
+                                <img src="{{$product->file_url}}" class="product-img">
+                                    <h3>
+                                        <label>${{$product->price}}</label>
+                                    </h3>
+                                <a href="/addProduct/{{$product->id}}" class="reservar btn btn-success btn-sm btn-block">Comprar.</a>
                             </div>
                         </div>
-                    </div>
                 @endforeach
-            </div>
         </div>
     </div>
-
 @endsection

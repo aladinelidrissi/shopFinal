@@ -4,10 +4,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-
-
-
-
 </head>
 <body>
 @section('sidebar')
@@ -51,11 +47,20 @@
 @show
 <br><br><br><br>
 
+@section('messages')
+    @if(Session::has('message'))
+        <div class="alert {{ Session::get('alert-class')}}">
+            <strong>{{ Session::get('message') }}</strong>
+        </div>
+    @endif
+@show
+
 <div class="container">
     @yield('content')
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://use.fontawesome.com/9131e865b7.js"></script>
+<script src="/js/psw_validate.js"></script>
 </body>
 </html>

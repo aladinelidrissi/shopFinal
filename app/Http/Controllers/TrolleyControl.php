@@ -34,6 +34,9 @@ class TrolleyControl extends Controller
         $trolleyItem->trolley_id= $trolley->id;
         $trolleyItem->save();
 
+        Session::flash('message', 'Producte afegit.');
+        Session::flash('alert-class', 'alert-success');
+
         return redirect('/trolley');
 
     }
@@ -59,6 +62,11 @@ class TrolleyControl extends Controller
     public function removeItem($id){
 
         TrolleyItem::destroy($id);
+
+
+        Session::flash('message', 'Producte eliminat.');
+        Session::flash('alert-class', 'alert-danger');
+
         return redirect('/trolley');
     }
 

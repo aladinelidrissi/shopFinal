@@ -48,7 +48,10 @@ class ProductControl extends Controller
 
         Product::destroy($id);
 
-        return redirect('/admin/products')->with('message', 'Message sent!');
+        Session::flash('message', 'Producte esborrat!');
+        Session::flash('alert-class', 'alert-danger');
+
+        return redirect('/admin/products');
     }
 
     public function newProduct(){
@@ -59,32 +62,36 @@ class ProductControl extends Controller
 
         // getting all of the post data
         $file = Request::file('file');
+
         // setting up rules
+        $destinationPath = 'img/'; // upload path
+        $extension = $file->getClientOriginalExtension(); // getting image extension
+        $fileName = rand(11111, 99999) . '.' . $extension; // renameing image
+        $file->move($destinationPath, $fileName); // uploading file to given path
 
-                $destinationPath = 'img/'; // upload path
-                $extension = $file->getClientOriginalExtension(); // getting image extension
-                $fileName = rand(11111, 99999) . '.' . $extension; // renameing image
-                $file->move($destinationPath, $fileName); // uploading file to given path
+
+        $entry = new \App\File();
+        $entry->mime = $file->getClientMimeType();
+        $entry->original_filename = $file->getClientOriginalName();
+        $entry->filename = $file->getFilename() . '.' . $extension;
+
+        $entry->save();
+
+        $product = new Product();
+        $product->file_id = $entry->id;
+        $product->name = Request::input('name');
+        $product->description = Request::input('description');
+        $product->price = Request::input('price');
+        $product->file_url = 'img/'.$fileName;
+
+        $product->save();
 
 
-                $entry = new \App\File();
-                $entry->mime = $file->getClientMimeType();
-                $entry->original_filename = $file->getClientOriginalName();
-                $entry->filename = $file->getFilename() . '.' . $extension;
+        // sending back with message
+        Session::flash('message', 'Producte nou creat.');
+        Session::flash('alert-class', 'alert-success');
 
-                $entry->save();
-
-                $product = new Product();
-                $product->file_id = $entry->id;
-                $product->name = Request::input('name');
-                $product->description = Request::input('description');
-                $product->price = Request::input('price');
-                $product->file_url = 'img/'.$fileName;
-
-                $product->save();
-
-                // sending back with message
-                return redirect('/admin/products')->with('message', 'Message sent!');
+        return redirect('/admin/products');
 
     }
     protected function editProduct($id)
@@ -92,7 +99,7 @@ class ProductControl extends Controller
         $product = Product::find($id);
         $file = Request::file('file');
 
-        if(Input::has('file')){
+        if($file){
             $destinationPath = 'img/'; // upload path
             $extension = $file->getClientOriginalExtension(); // getting image extension
             $fileName = rand(11111, 99999) . '.' . $extension; // renameing image
@@ -106,6 +113,9 @@ class ProductControl extends Controller
 
 
         $product->save();
+
+        Session::flash('message', 'Producte editat.');
+        Session::flash('alert-class', 'alert-info');
 
         return redirect('/admin/products');
     }
