@@ -28,7 +28,7 @@
                         <li><a href="/auth/login">Iniciar Sessió</a></li>
                         <li><a href="/auth/register">Registrar-se</a></li>
                     @elseif(Auth::user()->isBuyer())
-                        <li><a href="/order">Les meves comandes<span class="fa fa-truck"></span></a></li>
+                        <li><a href="/charge">Les meves comandes<span class="fa fa-truck"></span></a></li>
                         <li><a href="/trolley">Carret <span class="fa fa-shopping-basket"></span></a></li>
                     @elseif(Auth::user()->isAdmin())
                         <li><a href="/admin/products">Llista de productes <span class="fa fa-list-alt"></span></a></li>

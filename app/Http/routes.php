@@ -33,4 +33,9 @@ Route::get('/addProduct/{productId}', 'TrolleyControl@addItem');
 Route::get('/removeItem/{productId}', 'TrolleyControl@removeItem');
 Route::get('/trolley', 'TrolleyControl@showTrolley');
 
+Route::post('/checkout', 'ChargeControl@checkout');
+
+Route::get('charge/{chargeId}', 'ChargeControl@showCharge');
+Route::get('charge', 'ChargeControl@index');
+Route::get('download/{chargeId}/{filename}', 'ChargeControl@download');
 
