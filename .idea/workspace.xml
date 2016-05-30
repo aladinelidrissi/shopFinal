@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="209e495c-c1c5-4701-8f1e-ff1f07c13a1d" name="Default" comment="Commit amb la funció de carret de compra, on surt el preu total dels productes que s'han seleccionat per la compra.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/22360.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/33289.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/52256.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/60251.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/TrolleyControl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Trolley.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/TrolleyItem.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_05_25_170746_create_users_roles.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_05_26_205927_create_product_fileurl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_05_29_210423_create_table_trolleys.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_05_29_210428_create_table_trolleys_item.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_05_30_000946_drop_product_imageurl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/auth/edit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/trolley/show.blade.php" />
+    <list default="true" id="209e495c-c1c5-4701-8f1e-ff1f07c13a1d" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/15966.PNG" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
     </list>
     <ignored path="shop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +31,43 @@
     <favorites_list name="shop" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="22360.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/img/22360.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="33289.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/img/33289.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="52256.PNG" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/img/52256.PNG">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="60251.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/img/60251.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ds3.jpg" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/img/ds3.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -588,7 +609,7 @@
       <workItem from="1464295812123" duration="5101000" />
       <workItem from="1464353671757" duration="16526000" />
       <workItem from="1464549285533" duration="7726000" />
-      <workItem from="1464597390539" duration="1322000" />
+      <workItem from="1464597390539" duration="2206000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1463671941978</created>
@@ -639,11 +660,18 @@
       <option name="project" value="LOCAL" />
       <updated>1464598785873</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit amb errors de pujada de fitxers a github arreglat(migracions, imatges i classes del carret).">
+      <created>1464598871896</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1464598871896</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85225000" />
+    <option name="totallyTimeSpent" value="86109000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -718,9 +746,10 @@
     <MESSAGE value="Commit amb canvis per crear/editar/eliminar usuaris, i definir si un usuari és comprador o administrador." />
     <MESSAGE value="Commit amb canvis per tal de que la foto que pujes al formulari de producte es mostri a l'index, i canvis afegit dropdown en el navbar amb opció d'editar el propi usuari." />
     <MESSAGE value="Commit amb possiblitat de modificar un producte (no totalment, la part de modificar l'arxiu que funciona com a imatge del producte encara no funciona)." />
-    <MESSAGE value="Commit amb la funció de carret de compra, on surt el preu total dels productes que s'han seleccionat per la compra." />
     <MESSAGE value="Commit amb la pujada d'algunes migracions i classes que no deixava pujar-les anteriorment." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit amb la pujada d'algunes migracions i classes que no deixava pujar-les anteriorment." />
+    <MESSAGE value="Commit amb la funció de carret de compra, on surt el preu total dels productes que s'han seleccionat per la compra." />
+    <MESSAGE value="Commit amb errors de pujada de fitxers a github arreglat(migracions, imatges i classes del carret)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit amb errors de pujada de fitxers a github arreglat(migracions, imatges i classes del carret)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -729,10 +758,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/storage/app/phpCD0E.tmp.PNG" />
-    <entry file="file://$PROJECT_DIR$/storage/app/php94F1.tmp.jpg" />
-    <entry file="file://$PROJECT_DIR$/storage/app/php13DC.tmp.jpg" />
-    <entry file="file://$PROJECT_DIR$/storage/app/phpE394.tmp.jpg" />
     <entry file="file://$PROJECT_DIR$/storage/app/phpAF00.tmp.PNG" />
     <entry file="file://$PROJECT_DIR$/storage/app/php67F0.tmp.jpg" />
     <entry file="file://$PROJECT_DIR$/storage/app/php868E.tmp.jpg" />
@@ -767,11 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/15966.PNG">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_18_135905_create_files_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -791,16 +811,6 @@
         <state relative-caret-position="323">
           <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/60251.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/52256.PNG">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/createuser.blade.php">
@@ -863,6 +873,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
           <caret line="611" column="16" selection-start-line="611" selection-start-column="16" selection-end-line="611" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -877,6 +888,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -909,6 +921,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -916,6 +929,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -923,6 +937,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1018,6 +1033,44 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/15966.PNG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/22360.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/33289.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/52256.PNG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/60251.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/4d10b7685a463c38c2cb2cb200a59dc5b364d6e4.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/ds3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
