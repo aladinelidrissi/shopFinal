@@ -1,4 +1,6 @@
 <?php
+// Main route...
+Route::get('/', 'MainControl@index');
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
@@ -20,12 +22,15 @@ Route::get('/admin/product/new', 'ProductControl@newProduct');
 Route::get('/admin/products', 'ProductControl@index');
 Route::get('/admin/product/destroy/{id}', 'ProductControl@destroy');
 Route::post('/admin/product/save', 'ProductControl@add');
+Route::get('/admin/product/edit/{id}', 'ProductControl@editProduct');
 
 // User routes...
 Route::get('/user/edit', 'UserControl@goEdit');
 Route::post('/user/edit/save/{id}', 'UserControl@selfEdit');
 
+//Trolley routes...
+Route::get('/addProduct/{productId}', 'TrolleyControl@addItem');
+Route::get('/removeItem/{productId}', 'TrolleyControl@removeItem');
+Route::get('/trolley', 'TrolleyControl@showTrolley');
 
-// Other routes...
-Route::get('/', 'MainControl@index');
 
