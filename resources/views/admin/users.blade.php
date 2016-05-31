@@ -11,12 +11,9 @@
 @endsection
 
 @section('content')
+
         <div class="row">
-            <div class="col-md-6">
-                <a href="/admin/user/new"><button class="btn btn-success">Crear Usuari</button></a>
-            </div>
-        </div>
-        <div class="row">
+            <h2 class="section-heading" style="font-weight: bold" >Usuaris</h2><br><br>
             <div class="col-md-12">
                 <table class="table table-striped">
                     <thead>
@@ -91,5 +88,9 @@
                 </table>
             </div>
         </div>
-
+        <div class="row">
+            <div class="col-md-6">
+                <a href="/admin/user/new"><button class="btn btn-success">Crear Usuari</button></a>
+            </div>
+        </div>
 @endsection

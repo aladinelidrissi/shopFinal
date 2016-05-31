@@ -17,10 +17,10 @@
             <table class="table table-hover">
                 <thead>
                 <tr>
-                    <th>Product</th>
+                    <th>Producte</th>
                     <th></th>
                     <th class="text-center"></th>
-                    <th class="text-center">Total</th>
+                    <th class="text-center">Preu de l'article</th>
                     <th> </th>
                 </tr>
                 </thead>
@@ -29,9 +29,9 @@
                     <tr>
                         <td class="col-sm-8 col-md-6">
                             <div class="media">
-                                <a class="thumbnail pull-left" href="#"> <img class="media-object" src="{{$item->product->file_url}}" style="width: 100px; height: 72px;"> </a>
+                                <a class="thumbnail pull-left" href="#"> <img class="img-responsive media-object" src="{{$item->product->file_url}}" style="width: 100px; height: 72px;"> </a>
                                 <div class="media-body">
-                                    <h4 class="media-heading"><a href="#">{{$item->product->name}}</a></h4>
+                                    <h4 class="media-heading">{{$item->product->name}}</h4>
                                 </div>
                             </div></td>
                         <td class="col-sm-1 col-md-1" style="text-align: center">
@@ -40,7 +40,7 @@
                         <td class="col-sm-1 col-md-1 text-center"><strong>${{$item->product->price}}</strong></td>
                         <td class="col-sm-1 col-md-1">
                             <a href="/removeItem/{{$item->id}}"> <button type="button" class="btn btn-danger">
-                                    <span class="fa fa-remove"></span> Remove
+                                    <span class="fa fa-remove"></span> Eliminar
                                 </button>
                             </a>
                         </td>
@@ -51,7 +51,7 @@
                     <td>   </td>
                     <td>   </td>
                     <td>   </td>
-                    <td><h3>Total</h3></td>
+                    <td><h3>Total a pagar: </h3></td>
                     <td class="text-right"><h3><strong>${{$total}}</strong></h3></td>
                 </tr>
                 <tr>
@@ -60,7 +60,7 @@
                     <td>   </td>
                     <td>
                         <a href="/"> <button type="button" class="btn btn-default">
-                                <span class="fa fa-shopping-cart"></span> Continue Shopping
+                                <span class="fa fa-shopping-cart"></span> Continuar amb la compra
                             </button>
                         </a></td>
                     <td class="col-md-2">

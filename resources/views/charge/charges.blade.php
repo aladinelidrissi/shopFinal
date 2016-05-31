@@ -14,7 +14,7 @@
 
     <div class="row">
         <div class="col-md-12">
-            <h2>Your past orders</h2>
+            <h2>Els teus ordres fets</h2>
         </div>
     </div>
     <div class="row">
@@ -23,7 +23,7 @@
                 <thead>
                 <tr>
                     <th class="col-sm-2">Id</th>
-                    <th class="col-sm-4">Date</th>
+                    <th class="col-sm-4">Data</th>
                     <th class="col-sm-2"></th>
                 </tr>
                 </thead>

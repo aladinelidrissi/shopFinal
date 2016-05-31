@@ -15,6 +15,7 @@
         {!! csrf_field() !!}
         <fieldset>
             <h2 class="section-heading"  style="font-weight: bold" >Iniciar Sessió</h2><br><br>
+
             <div class="form-group">
                 <label for="email" class="col-lg-2 control-label">Usuari/E-Mail</label>
                 <div class="col-lg-10">

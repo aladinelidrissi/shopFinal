@@ -23,7 +23,7 @@
                                     </div>
                                     <div class="col-md-6 col-xs-6 price">
                                         <h3>
-                                            <label>${{$entry->price}}</label></h3>
+                                            <label>€{{$entry->price}}</label></h3>
                                     </div>
                                 </div>
                                 <p>{{$entry->description}}</p>

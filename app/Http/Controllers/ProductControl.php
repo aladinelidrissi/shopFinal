@@ -23,9 +23,10 @@ class ProductControl extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
-            'description' => 'required|email|max:255|unique:users',
+            'intro' => 'required|max:100',
+            'description' => 'required|email|unique:users',
             'price' => 'required|confirmed',
-            'role' => 'required',
+            'file' => 'required',
 
         ]);
     }
@@ -80,6 +81,7 @@ class ProductControl extends Controller
         $product = new Product();
         $product->file_id = $entry->id;
         $product->name = Request::input('name');
+        $product->intro = Request::input('intro');
         $product->description = Request::input('description');
         $product->price = Request::input('price');
         $product->file_url = 'img/'.$fileName;
@@ -108,6 +110,7 @@ class ProductControl extends Controller
         }
 
         $product->name = Input::get('name');
+        $product->intro = Request::input('intro');
         $product->description = Input::get('description');
         $product->price = Input::get('price');
 

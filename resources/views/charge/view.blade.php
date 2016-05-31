@@ -13,8 +13,8 @@
 @section('content')
     <div class="row">
         <div class="col-md-8">
-            <h3>Charge num.: {{$charge->id}}</h3>
-            <h3>Made on : {{$charge->created_at}}</h3>
+            <h3>Ordre numero: {{$charge->id}}</h3>
+            <h3>Feta el : {{$charge->created_at}}</h3>
         </div>
     </div>
     <div class="row">
@@ -22,9 +22,9 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th class="col-sm-4">Name</th>
-                    <th class="col-sm-4">File</th>
-                    <th class="col-sm-2">Price</th>
+                    <th class="col-sm-4">Nom</th>
+                    <th class="col-sm-4">Arxiu</th>
+                    <th class="col-sm-2">Preu</th>
                 </tr>
                 </thead>
                 @foreach($charge->chargeItems as $item)

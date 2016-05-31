@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Trolley;
 use App\TrolleyItem;
 
+use Illuminate\Support\Facades\Session;
 use App\Http\Requests;
 
 
