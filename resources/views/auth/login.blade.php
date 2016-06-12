@@ -28,7 +28,7 @@
                     <input type="password" class="form-control" name="password" required>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="remember" checked > Recordar-me
+                            <input type="checkbox" name="remember" checked ><strong> Recordar-me</strong>
                         </label>
                     </div>
                 </div>
@@ -41,12 +41,13 @@
             </div>
             <div class="form-group">
                 <div class="col-md-12 control">
-                    <div style="border-top: 1px solid black; padding-top:10px; font-size:100%" >
+                    <strong><div style="border-top: 1px solid black; padding-top:10px; font-size:100%" >
                         No tens compte?
                         <a href="/auth/register" >
                             Registra't!
                         </a>
-                    </div>
+                     </div>
+                    </strong>
                 </div>
             </div>
         </fieldset>

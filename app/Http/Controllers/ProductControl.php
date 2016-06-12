@@ -31,8 +31,6 @@ class ProductControl extends Controller
         ]);
     }
 
-
-
     public function index(){
 
         $products = Product::all();

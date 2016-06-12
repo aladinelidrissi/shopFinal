@@ -15,16 +15,19 @@
         <div class="row">
             <h2 class="section-heading" style="font-weight: bold" >Productes</h2><br><br>
             <div class="col-md-12">
-                <table class="table table-striped">
+                <table class="table table-hover">
                     <thead>
+                    <td><strong>ID</strong></td>
                     <td><strong>Nom</strong></td>
                     <td><strong>Preu</strong></td>
                     <td><strong>Arxiu</strong></td>
+                    <td></td>
                     <td></td>
                     </thead>
                     <tbody>
                     @foreach ($products as $product)
                         <tr>
+                            <td class="nomproduct">{{$product->id}}</td>
                             <td class="nomproduct">{{$product->name}}</td>
                             <td class="preu">{{$product->price}}€</td>
                             <td>{{$product->file->original_filename}}</td>

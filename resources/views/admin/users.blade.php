@@ -15,20 +15,23 @@
         <div class="row">
             <h2 class="section-heading" style="font-weight: bold" >Usuaris</h2><br><br>
             <div class="col-md-12">
-                <table class="table table-striped">
+                <table class="table table-hover">
                     <thead>
-                    <td>Nom</td>
-                    <td>e-mail</td>
-                    <td>Data de creació</td>
-                    <td>Rol</td>
+                    <td><strong>ID</strong></td>
+                    <td><strong>Nom</strong></td>
+                    <td><strong>E-mail</strong></td>
+                    <td><strong>Ùltima connexió</strong></td>
+                    <td><strong>Rol</strong></td>
+                    <td></td>
                     <td></td>
                     </thead>
                     <tbody>
                     @foreach ($users as $user)
                         <tr>
+                            <td>{{$user->id}}</td>
                             <td>{{$user->name}}</td>
                             <td>{{$user->email}}$</td>
-                            <td>{{$user->created_at}}</td>
+                            <td>{{$user->updated_at}}</td>
                             <td>{{$user->role}}</td>
                             <td><a href="/admin/user/delete/{{$user->id}}"><button class="btn btn-danger">Eliminar</button></a></td>
                             <td>
@@ -52,20 +55,20 @@
                                                         <input type="text" name="name" value="{{$user->name}}" class="form-control input-sm" required/>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label class="col-sm-1 control-label">Nom:</label>
+                                                        <label class="col-sm-1 control-label">E-mail:</label>
                                                         <input type="text" name="email" value="{{$user->email}}" class="form-control input-sm" required/>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label class="col-sm-1 control-label" for="role">Rol de l'usuari</label>
-                                                        <div class="col-sm-11">
+                                                        <label class="col-sm-11" for="role">Rol de l'usuari</label>
+                                                        <div class="col-sm-12">
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio"name="role" id="optionsRadios1" value="admin" checked="" class="form-control input-sm"> Usuari administrador
+                                                                    <input type="radio"name="role" id="optionsRadios1" value="admin" checked="" class="form-control"> Usuari administrador
                                                                 </label>
                                                             </div>
                                                             <div class="radio">
                                                                 <label>
-                                                                    <input type="radio" name="role" id="optionsRadios2" value="buyer" class="form-control input-sm"> Usuari normal
+                                                                    <input type="radio" name="role" id="optionsRadios2" value="buyer" class="form-control"> Usuari normal
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -73,11 +76,7 @@
                                                     <button type="submit" class="btn btn-sm btn-success" >Guardar</button>
                                                 </form>
                                             </div>
-                                            <div class="modal-footer">
-
-                                            </div>
                                         </div>
-
                                     </div>
                                 </div>
 

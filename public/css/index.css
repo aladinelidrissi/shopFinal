@@ -1,19 +1,23 @@
 body{
     font-family: 'Istok Web', serif;
-    background-color: lightgray;
+    background-image: url("/img/bg2.jpg");
 }
 .nomproduct a{
     font-family: 'Cinzel', serif;
     color:black;
-
 }
-
+.nomproduct{
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    font-size:medium;
+}
 .panel{
     background-color: lightgray;
-    border: 3px solid darkgrey;
+    border: 3px solid lightslategrey;
 }
+
 .panel-footer{
-    background-color: darkgrey;
+    background-color: dimgrey;
     margin-top:50px;
 }
 .panel-content{
@@ -46,4 +50,24 @@ body{
     width:250px;
     height: 300px;
 
+}
+.modal-header{
+    background-color:darkgrey;
+}
+.modal-content{
+    background-color:lightgrey;
+}
+
+
+
+
+table{
+    background-color: lightgrey;
+}
+thead{
+    background-color:dimgrey;
+    color:white;
+}
+h2{
+    font-weight: bolder;
 }

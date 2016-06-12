@@ -19,7 +19,7 @@
     </div>
     <div class="row">
         <div class="col-md-8">
-            <table class="table table-striped">
+            <table class="table table-hover ">
                 <thead>
                 <tr>
                     <th class="col-sm-2">Id</th>
@@ -29,9 +29,9 @@
                 </thead>
                 @foreach($charges as $charge)
                     <tr>
-                        <td>{{$charge->id}}</td>
-                        <td><a href="/charge/{{$charge->id}}"> {{$charge->created_at}}</a></td>
-                        <td><a href="/charge/{{$charge->id}}"><i class="fa fa-search-plus"></i></a></td>
+                        <td><strong>{{$charge->id}}</strong></td>
+                        <td>{{$charge->created_at}}</td>
+                        <td><a href="/charge/{{$charge->id}}"><i class="fa fa-search-plus"> Detalls</i></a></td>
                     </tr>
                 @endforeach
 

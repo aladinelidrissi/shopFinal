@@ -13,7 +13,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-8">
-            <h3>Ordre numero: {{$charge->id}}</h3>
+            <h3><strong>Ordre numero: {{$charge->id}}</strong></h3>
             <h3>Feta el : {{$charge->created_at}}</h3>
         </div>
     </div>
