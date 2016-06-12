@@ -14,7 +14,7 @@
 
     <div class="row">
         <div class="col-sm-12 col-md-10 col-md-offset-1">
-            <table class="table table-hover">
+            <table class="table ">
                 <thead>
                 <tr>
                     <th>Producte</th>
@@ -37,7 +37,7 @@
                         <td class="col-sm-1 col-md-1" style="text-align: center">
                         </td>
                         <td class="col-sm-1 col-md-1 text-center"></td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>${{$item->product->price}}</strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>{{$item->product->price}}€</strong></td>
                         <td class="col-sm-1 col-md-1">
                             <a href="/removeItem/{{$item->id}}"> <button type="button" class="btn btn-danger">
                                     <span class="fa fa-remove"></span> Eliminar
@@ -52,7 +52,7 @@
                     <td>   </td>
                     <td>   </td>
                     <td><h3>Total a pagar: </h3></td>
-                    <td class="text-right"><h3><strong>${{$total}}</strong></h3></td>
+                    <td class="text-right"><h3><strong>{{$total}}€</strong></h3></td>
                 </tr>
                 <tr>
                     <td>   </td>
