@@ -33,7 +33,7 @@
                             <td>{{$user->email}}$</td>
                             <td>{{$user->updated_at}}</td>
                             <td>{{$user->role}}</td>
-                            <td><a href="/admin/user/delete/{{$user->id}}"><button class="btn btn-danger">Eliminar</button></a></td>
+                            <td><a href="/admin/user/delete/{{$user->id}}"><button class="btn btn-danger eliminar">Eliminar</button></a></td>
                             <td>
                                 <!-- Trigger the modal with a button -->
                                 <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal{{$user->id}}">Editar</button>

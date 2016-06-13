@@ -63,6 +63,10 @@ class UserControl extends Controller
         $user->id = Input::get('user');
         $user->name = Input::get('name');
         $user->email = Input::get('email');
+        $user->address = Input::get('address');
+        $user->city = Input::get('city');
+        $user->cp = Input::get('cp');
+        $user->number = Input::get('number');
         if (Input::has('password')){
             $user->password = bcrypt(Input::get('password'));
         }

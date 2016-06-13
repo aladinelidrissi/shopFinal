@@ -18,7 +18,7 @@ class User extends Authenticatable implements AuthenticatableContract, CanResetP
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'role'
+        'name', 'email', 'password', 'role','address','cp','number','city'
     ];
 
     /**

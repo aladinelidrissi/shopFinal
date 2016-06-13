@@ -31,7 +31,7 @@
                             <td class="nomproduct">{{$product->name}}</td>
                             <td class="preu">{{$product->price}}€</td>
                             <td>{{$product->file->original_filename}}</td>
-                            <td><a href="/admin/product/destroy/{{$product->id}}"><button class="btn btn-danger">Eliminar</button></a> </td>
+                            <td><a href="/admin/product/destroy/{{$product->id}}"><button class="btn btn-danger eliminar">Eliminar</button></a> </td>
                             <td>
                                 <!-- Trigger the modal with a button -->
                                 <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal{{$product->id}}">Editar</button>

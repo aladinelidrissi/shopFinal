@@ -38,13 +38,37 @@
                     <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" pattern="[a-zA-Z0-9_\-\.~]{6,}" >
                 </div>
             </div>
+
+            <div class="form-group">
+                <label for="address" class="col-lg-2 control-label">Adreça</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" name="address" id="address" value="{{Auth::user()->address}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="city" class="col-lg-2 control-label">Població</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" name="city" id="city" value="{{Auth::user()->city}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cp" class="col-lg-2 control-label">Codi postal</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" name="cp" id="cp" value="{{Auth::user()->cp}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="number" class="col-lg-2 control-label">Numero de telefon</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" name="number" id="number" value="{{Auth::user()->number}}">
+                </div>
+            </div>
             <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
                     <button class="btn btn-default"><a href="/">Cancel·lar</a></button>
                     <button type="submit" class="btn btn-primary">Entrar</button>
                 </div>
             </div>
-
         </form>
 @endsection
 

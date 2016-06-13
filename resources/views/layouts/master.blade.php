@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" type="text/css" href="/css/index.css">
 </head>
-<body>
+<body >
 @section('sidebar')
     <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
         <div class="container-fluid">
@@ -68,7 +68,9 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/2.0.0-beta.17/Rx.js"></script>
 <script src="https://use.fontawesome.com/9131e865b7.js"></script>
 <script src="/js/psw_validate.js"></script>
+<script src="/js/script.js"></script>
 </body>
 </html>

@@ -37,7 +37,7 @@
                         <td class="preu">{{$charge->total_paid}}€</td>
                         <td>{{$charge->created_at}}</td>
                         <td><a href="/charge/{{$charge->id}}"><i class="fa fa-search-plus"> Detalls</i></a></td>
-                        <td><a href="/admin/charge/destroy/{{$charge->id}}"><button class="btn btn-danger">Eliminar</button></a> </td>
+                        <td><a href="/admin/charge/destroy/{{$charge->id}}"><button class="btn btn-danger eliminar">Eliminar</button></a> </td>
                         <td>
                             <!-- Trigger the modal with a button -->
                             <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal{{$charge->id}}">Editar</button>
