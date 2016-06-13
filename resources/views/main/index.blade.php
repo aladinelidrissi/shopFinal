@@ -11,19 +11,25 @@
 @endsection
 
 @section('content')
-    <div class="row">
+    <div class="row ">
+        @if(!Auth::user())
+        @elseif(Auth::user()->isAdmin())
+
+            <button><a href="#" class="restaurar btn ">Restaurar els productes amagats</a>
+            </button>
+        @endif
+        <ul class=" sortable">
         @foreach ($products as $product)
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="panel panel-default producte">
+                <div class="panel panel-default producte ">
                     <div class="panel-heading nomproduct">
                         <a href="/description/{{$product->id}}"><strong>{{$product->name}}</strong></a>
                     </div>
                     <div class="panel-content">
                         <a href="/description/{{$product->id}}"><img src="{{$product->file_url}}" class="img-responsive product-img " /></a>
                         <p class="label label-default"></p>
-                        <p><strong>{{$product->intro}}</strong></p>
-                        <p class="descrip">{{$product->description}}</p>
-                        <p class=" preu" ><strong >Preu: </strong>{{$product->price}} €</p>
+                        <p class="intro"><strong>{{$product->intro}}</strong></p>
+                        <p class="preu" ><strong >Preu: </strong>{{$product->price}} €</p>
 
                     </div>
                     <div class="panel-footer">
@@ -36,11 +42,22 @@
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"><a href="/addProduct/{{$product->id}}" class="buy">Comprar</a></span>
                             </button>
                         @else
-                        @endif
+                            <button type="button" class="btn btn-sm btn-warning amagar">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"><a href="#" class="buy">Amagar</a></span>
+                            </button>
 
+                        @endif
+                            <button type="button" class="btn btn-sm btn-info info">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"><a href="#" class="buy">Petita descripció</a></span>
+                            </button>
                     </div>
                 </div>
             </div>
         @endforeach
+        </ul>
+
+
     </div>
 @endsection
+
+

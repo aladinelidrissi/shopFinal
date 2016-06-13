@@ -72,7 +72,7 @@
                                     data-amount="{{$total*100}}"
                                     data-name="Aladin-shop"
                                     data-description="Products"
-                                    data-image="/128x128.png"
+                                    data-image="/img/pay.png"
                                     data-locale="auto">
                             </script>
                         </form>

@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0-beta.1/themes/smoothness/jquery-ui.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Istok Web">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Molengo">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Audiowide">
@@ -66,7 +67,10 @@
 <div class="container">
     @yield('content')
 </div>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0-beta.1/jquery-ui.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/2.0.0-beta.17/Rx.js"></script>
 <script src="https://use.fontawesome.com/9131e865b7.js"></script>

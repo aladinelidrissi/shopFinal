@@ -38,6 +38,16 @@
                         <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" pattern="[a-zA-Z0-9_\-\.~]{6,}" required>
                     </div>
                 </div>
+            <div class="form-group" style="visibility: hidden">
+                <label class="col-lg-2 control-label" for="role">Rol de l'usuari</label>
+                <div class="col-lg-10">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="role" id="optionsRadios1" value="buyer" checked=""> Usuari administrador
+                        </label>
+                    </div>
+                </div>
+            </div>
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                         <button class="btn btn-default"><a href="/">Cancel·lar</a></button>

@@ -40,12 +40,11 @@ class UserControl extends Controller
         $user = User::find($id);
         $user->name = Input::get('name');
         $user->email = Input::get('email');
-
-        if (Input::has('role')) {
-            $user->role = Input::get('role');
-        }else{
-            $user->role = Input::get('role','buyer');
-        }
+        $user->address = Input::get('address');
+        $user->city = Input::get('city');
+        $user->cp = Input::get('cp');
+        $user->number = Input::get('number');
+        $user->role = Input::get('role');
 
         $user->save();
 

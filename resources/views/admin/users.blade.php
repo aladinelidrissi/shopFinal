@@ -21,6 +21,10 @@
                     <td><strong>Nom</strong></td>
                     <td><strong>E-mail</strong></td>
                     <td><strong>Ùltima connexió</strong></td>
+                    <td><strong>Poblacio</strong></td>
+                    <td><strong>Direccio</strong></td>
+                    <td><strong>Codi Postal</strong></td>
+                    <td><strong>Telefon</strong></td>
                     <td><strong>Rol</strong></td>
                     <td></td>
                     <td></td>
@@ -32,6 +36,10 @@
                             <td>{{$user->name}}</td>
                             <td>{{$user->email}}$</td>
                             <td>{{$user->updated_at}}</td>
+                            <td>{{$user->city}}</td>
+                            <td>{{$user->address}}</td>
+                            <td>{{$user->cp}}</td>
+                            <td>{{$user->number}}</td>
                             <td>{{$user->role}}</td>
                             <td><a href="/admin/user/delete/{{$user->id}}"><button class="btn btn-danger eliminar">Eliminar</button></a></td>
                             <td>
@@ -76,6 +84,30 @@
 
                                                             <input type="radio"name="role" id="optionsRadios1" value="admin" checked="" class="form-control"> Usuari administrador
                                                             <input type="radio" name="role" id="optionsRadios2" value="buyer" class="form-control"> Usuari normal
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label" for="user">Adreça:</label>
+                                                        <div class="col-md-9">
+                                                            <input type="text" name="address" value="{{$user->address}}" class="form-control input-sm" required/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label" for="user">Poblacio:</label>
+                                                        <div class="col-md-9">
+                                                            <input type="text" name="city" value="{{$user->city}}" class="form-control input-sm" required/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label" for="user">Codi Postal:</label>
+                                                        <div class="col-md-9">
+                                                            <input type="text" name="cp" value="{{$user->cp}}" class="form-control input-sm" required/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label" for="user">Numero telefon:</label>
+                                                        <div class="col-md-9">
+                                                            <input type="text" name="number" value="{{$user->number}}" class="form-control input-sm" required/>
                                                         </div>
                                                     </div>
 
