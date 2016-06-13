@@ -60,6 +60,7 @@ class UserControl extends Controller
     protected function selfEdit($id)
     {
         $user = User::find($id);
+        $user->id = Input::get('user');
         $user->name = Input::get('name');
         $user->email = Input::get('email');
         if (Input::has('password')){

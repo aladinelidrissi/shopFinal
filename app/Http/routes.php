@@ -24,6 +24,11 @@ Route::get('/admin/products', 'ProductControl@index');
 Route::get('/admin/product/destroy/{id}', 'ProductControl@destroy');
 Route::post('/admin/product/save', 'ProductControl@add');
 Route::post('/admin/product/edit/{id}', 'ProductControl@editProduct');
+//Admin's charges routes...
+Route::get('/admin/charges', 'ChargeControl@adminIndex');
+Route::post('/admin/charge/edit/{id}', 'ChargeControl@editCharge');
+Route::get('/admin/charge/destroy/{id}', 'ChargeControl@destroy');
+
 
 // User routes...
 Route::get('/user/edit', 'UserControl@goEdit');

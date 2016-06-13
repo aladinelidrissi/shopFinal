@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
 
 use Illuminate\Support\Facades\Storage;
 use App\Charge;
@@ -70,5 +72,36 @@ class ChargeControl extends Controller
     public function showCharge($chargeId){
         $charge = Charge::find($chargeId);
         return view('charge.view',['charge'=>$charge]);
+    }
+    public function adminIndex(){
+        $charges = Charge::all();
+
+        return view('admin.charges',['charges'=>$charges]);
+    }
+    protected function editCharge($id)
+    {
+        $charge = Charge::find($id);
+
+        $charge->id = Input::get('id');
+        $charge->user_id = Input::get('user');
+        $charge->total_paid = Input::get('total');
+
+        $charge->save();
+
+        Session::flash('message', 'Comanda editada.');
+        Session::flash('alert-class', 'alert-info');
+
+        return redirect('/admin/charges');
+    }
+    public function destroy($id){
+
+        $charge = Charge::find($id);
+
+        $charge->delete();
+
+        Session::flash('message', 'Comanda esborrada!');
+        Session::flash('alert-class', 'alert-danger');
+
+        return redirect('/admin/charges');
     }
 }

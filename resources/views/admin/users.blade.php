@@ -51,28 +51,34 @@
                                             <div class="modal-body">
                                                 <form action="/admin/user/edit/{{$user->id}}" class="form-horizontal">
                                                     <div class="form-group">
-                                                        <label class="col-sm-1 control-label">Nom:</label>
-                                                        <input type="text" name="name" value="{{$user->name}}" class="form-control input-sm" required/>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="col-sm-1 control-label">E-mail:</label>
-                                                        <input type="text" name="email" value="{{$user->email}}" class="form-control input-sm" required/>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="col-sm-11" for="role">Rol de l'usuari</label>
-                                                        <div class="col-sm-12">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio"name="role" id="optionsRadios1" value="admin" checked="" class="form-control"> Usuari administrador
-                                                                </label>
-                                                            </div>
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input type="radio" name="role" id="optionsRadios2" value="buyer" class="form-control"> Usuari normal
-                                                                </label>
-                                                            </div>
+                                                        <label class="col-md-3 control-label" for="user">ID de l'usuari</label>
+                                                        <div class="col-md-9">
+                                                            <input id="user" name="user" type="text" value="{{$user->id}}" class="form-control input-md" >
                                                         </div>
                                                     </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label" for="user">Nom:</label>
+                                                        <div class="col-md-9">
+                                                            <input type="text" name="name" value="{{$user->name}}" class="form-control input-sm" required/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label" for="user">E-mail:</label>
+                                                        <div class="col-md-9">
+                                                            <input type="text" name="email" value="{{$user->email}}" class="form-control input-sm" required/>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label" for="user">Rol de l'usuari:</label>
+                                                        <div class="col-md-9">
+
+                                                            <input type="radio"name="role" id="optionsRadios1" value="admin" checked="" class="form-control"> Usuari administrador
+                                                            <input type="radio" name="role" id="optionsRadios2" value="buyer" class="form-control"> Usuari normal
+                                                        </div>
+                                                    </div>
+
                                                     <button type="submit" class="btn btn-sm btn-success" >Guardar</button>
                                                 </form>
                                             </div>
