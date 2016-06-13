@@ -16,18 +16,18 @@ Route::post('auth/register', ['as' => 'registerPost', 'uses' => 'Auth\AuthContro
 // Admin's users routes...
 Route::get('/admin/users', ['as' => 'usersList', 'uses' =>'UserControl@usersIndex']);
 Route::get('/admin/user/new', 'UserControl@newUser');
-Route::get('/admin/user/delete/{id}', 'UserControl@deleteUser');
+Route::post('/admin/user/delete/{id}', 'UserControl@deleteUser');
 Route::get('/admin/user/edit/{id}', 'UserControl@editUser');
 // Admin's products routes...
 Route::get('/admin/product/new', 'ProductControl@newProduct');
 Route::get('/admin/products', 'ProductControl@index');
-Route::get('/admin/product/destroy/{id}', 'ProductControl@destroy');
+Route::post('/admin/product/destroy/{id}', 'ProductControl@destroy');
 Route::post('/admin/product/save', 'ProductControl@add');
 Route::post('/admin/product/edit/{id}', 'ProductControl@editProduct');
 //Admin's charges routes...
 Route::get('/admin/charges', 'ChargeControl@adminIndex');
 Route::post('/admin/charge/edit/{id}', 'ChargeControl@editCharge');
-Route::get('/admin/charge/destroy/{id}', 'ChargeControl@destroy');
+Route::post('/admin/charge/destroy/{id}', ['uses' =>'ChargeControl@destroy','as' => 'delCharge']);
 
 
 // User routes...
@@ -36,7 +36,7 @@ Route::post('/user/edit/save/{id}', 'UserControl@selfEdit');
 
 //Trolley routes...
 Route::get('/addProduct/{productId}', 'TrolleyControl@addItem');
-Route::get('/removeItem/{productId}', 'TrolleyControl@removeItem');
+Route::post('/removeItem/{productId}', 'TrolleyControl@removeItem');
 Route::get('/trolley', 'TrolleyControl@showTrolley');
 
 //Charge routes...

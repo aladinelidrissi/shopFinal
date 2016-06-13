@@ -21,6 +21,9 @@
                 <td><strong>Nom de l'usuari</strong></td>
                 <td><strong>Total pagat</strong></td>
                 <td><strong>Data del pagament</strong></td>
+                <td><strong>Direccio</strong></td>
+                <td><strong>Població</strong></td>
+                <td><strong>Codi Postal</strong></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -36,8 +39,17 @@
                         <td class="nomproduct">{{$user->name}}</td>
                         <td class="preu">{{$charge->total_paid}}€</td>
                         <td>{{$charge->created_at}}</td>
+                        <td>{{$user->address}}</td>
+                        <td>{{$user->city}}</td>
+                        <td>{{$user->cp}}</td>
                         <td><a href="/charge/{{$charge->id}}"><i class="fa fa-search-plus"> Detalls</i></a></td>
-                        <td><a href="/admin/charge/destroy/{{$charge->id}}"><button class="btn btn-danger eliminar">Eliminar</button></a> </td>
+                        <td>
+                            <form method="POST" action="/admin/charge/destroy/{{$charge->id}}" enctype="multipart/form-data" role="form" class="form-horizontal">
+                                {!! csrf_field() !!}
+                                <a href="/admin/charge/destroy/{{$charge->id}}"><button class="btn btn-danger eliminar">Eliminar</button></a>
+                            </form>
+
+                        </td>
                         <td>
                             <!-- Trigger the modal with a button -->
                             <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal{{$charge->id}}">Editar</button>

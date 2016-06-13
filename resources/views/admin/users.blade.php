@@ -41,7 +41,12 @@
                             <td>{{$user->cp}}</td>
                             <td>{{$user->number}}</td>
                             <td>{{$user->role}}</td>
-                            <td><a href="/admin/user/delete/{{$user->id}}"><button class="btn btn-danger eliminar">Eliminar</button></a></td>
+                            <td>
+                                <form method="POST" action="/admin/user/delete/{{$user->id}}" enctype="multipart/form-data" role="form" class="form-horizontal">
+                                    {!! csrf_field() !!}
+                                    <a href="/admin/user/delete/{{$user->id}}"><button class="btn btn-danger eliminar">Eliminar</button></a>
+                                </form>
+
                             <td>
                                 <!-- Trigger the modal with a button -->
                                 <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal{{$user->id}}">Editar</button>

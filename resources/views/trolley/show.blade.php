@@ -39,10 +39,10 @@
                         <td class="col-sm-1 col-md-1 text-center"></td>
                         <td class="col-sm-1 col-md-1 text-center"><strong>{{$item->product->price}}€</strong></td>
                         <td class="col-sm-1 col-md-1">
-                            <a href="/removeItem/{{$item->id}}"> <button type="button" class="btn btn-danger">
-                                    <span class="fa fa-remove"></span> Eliminar
-                                </button>
-                            </a>
+                            <form method="POST" action="/removeItem/{{$item->id}}" enctype="multipart/form-data" role="form" class="form-horizontal">
+                                {!! csrf_field() !!}
+                                <a href="/removeItem/{{$item->id}}"><button class="btn btn-danger eliminar">Eliminar</button></a>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
